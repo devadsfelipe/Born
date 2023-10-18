@@ -10,6 +10,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a href="#" class="logo"><b>F.</b>elps</a>
+        </div>
         <div class="navbar-nav ms-auto">
           <router-link to="/" class="nav-link">Home</router-link>
           <router-link to="/about" class="nav-link">About</router-link>
@@ -17,13 +20,40 @@
           <router-link to="/contact" class="nav-link">Contact</router-link>
         </div>
         <div class="navbar-nav ms-auto">
-            <a href="https://www.linkedin.com/in/felipe-o-612b4b84" target="_blank"><i class="fab fa-linkedin nav-link"></i></a>
-            <a href="https://www.instagram.com/felipe_ol_/" target="_blank"><i class="fab fa-instagram nav-link"></i></a>
-        </div>
+          <div class="toggleSwitches ">
+            <a><i class="fa fa-sun"></i></a>
+            <i class="fa fa-moon"></i>
+            <a class="selectLanguage">English</a>
+            </div>
+          </div>
       </div>
     </div>
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+.logo{
+  font-family: 'Roboto';
+  font-size: 25px;
+  color: var(--primary);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.logo b{
+  color: var(--textcolor)
+}
+
+.toggleSwitches{
+  align-self: center;
+  color: var(--bs-navbar-color)
+}
+
+.selectLanguage{
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--bs-navbar-color)
+}
+</style>
 
