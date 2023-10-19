@@ -19,41 +19,80 @@
           <router-link to="/skills" class="nav-link">Skills</router-link>
           <router-link to="/contact" class="nav-link">Contact</router-link>
         </div>
-        <div class="navbar-nav ms-auto">
-          <div class="toggleSwitches ">
+        <!-- <div class="navbar-nav ms-auto"> -->
+          <!-- <div class="socialmidia">
+            <a href="#"><i class="fab fa-linkedin nav-link"></i></a>
+            <a href="#"><i class="fab fa-instagram nav-link"></i></a>
+            <a href="#"><i class="fab fa-github nav-link"></i></a>
+          </div> -->
+          <!-- <div class="toggleSwitches ">
             <a><i class="fa fa-sun"></i></a>
             <i class="fa fa-moon"></i>
             <a class="selectLanguage">English</a>
-            </div>
-          </div>
+          </div> -->
+        <!-- </div> -->
       </div>
     </div>
   </nav>
 </template>
 
 <style scoped>
-
-.logo{
+.logo {
   font-family: 'Roboto';
   font-size: 25px;
-  color: var(--primary);
+  color: var(--textcolor);
   font-weight: 400;
   text-decoration: none;
 }
 
-.logo b{
-  color: var(--textcolor)
+.logo b {
+  color: var(--primary);
 }
 
-.toggleSwitches{
-  align-self: center;
-  color: var(--bs-navbar-color)
+.logo b:hover {
+  color: var(--primary);
+  transition: 0.9s ease;
+  font-size: 180%;
 }
 
-.selectLanguage{
-  font-weight: 500;
+.nav-link{
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    font-size: 110%;
+    color: var(--primary);
+}
+
+.socialmidia {
+  display: flex;
   text-decoration: none;
   color: var(--bs-navbar-color)
 }
+
+.socialmidia a{
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.socialmidia i {
+    cursor: pointer;
+    color: var(--textcolor);
+    transition: 0.3s ease;
+}
+
+.socialmidia i:hover {
+    font-size: 120%;
+    padding: 0px 10px;
+    color: var(--primary);
+}
+
+
+/* .selectLanguage {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--bs-navbar-color)
+} */
 </style>
 
