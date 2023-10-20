@@ -28,17 +28,22 @@
             <div class="imgbox">
                 <img src="../assets/photo-me.png">
             </div>
-            <div class="pattern"></div>
+            <div class="patterncsharp"></div>
+            <div class="patternvuejs"></div>
+            <div class="patternjs"></div>
+            <div class="patternazure"></div>
+            <div class="patternrabbitmq"></div>
         </div>
     </div>
 </template>
 
 <style scoped>
 .row {
+    margin-top: 10vh;
     position: relative;
     display: flex;
     width: 100%;
-    margin: 2%;
+    margin-left: 30px;
 }
 
 .cols {
@@ -55,9 +60,9 @@
 .textdata h2 {
     font-family: 'Tilt Neon', sans-serif;
     color: var(--textcolor);
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 400;
-    /* z-index: 1111; */
+    z-index: 1111;
 }
 
 .textdata h2 span {
@@ -112,7 +117,7 @@
 }
 
 .socialmidia {
-    /* margin: 20px 0px; */
+    height: 5vh;
 }
 
 .socialmidia i {
@@ -138,15 +143,86 @@
 }
 
 .imgbox img {
-    width: 70%;
+    width: 70vh;
+    margin-left: 10vh;
 }
 
 .imagedata:hover .imgbox {
-    transform: translateX(10px);
+    transform: scale(0.95);
 }
 
-.imagedata .pattern {
+.imagedata .patterncsharp {
     position: absolute;
-    background-color: url('../assets/C_Sharp_Icon.png');
+    background-image: url("../assets/C_Sharp_Icon.png");
+    height: 97px;
+    width: 86px;
+    background-size: cover;
+    top: 350px;
+    right: 350px;
+    transition: 1.5s ease;
+}
+
+.imagedata:hover .patterncsharp {
+    transform: translate(-100px, -300px) scale(0.95);
+}
+
+.imagedata .patternvuejs {
+    position: absolute;
+    background-image: url("../assets/Vue_Icon.png");
+    height: 97px;
+    width: 86px;
+    background-size: cover;
+    top: 350px;
+    right: 350px;
+    transition: 1.5s ease;
+}
+
+.imagedata:hover .patternvuejs {
+    transform: translate(-220px, -120px) scale(0.95);
+}
+
+.imagedata .patternjs {
+    position: absolute;
+    background-image: url("../assets/JS_Icon.png");
+    height: 97px;
+    width: 86px;
+    background-size: cover;
+    top: 350px;
+    right: 350px;
+    transition: 1.5s ease;
+}
+
+.imagedata:hover .patternjs {
+    transform: translate(150px, -230px) scale(0.95);
+}
+
+.imagedata .patternazure {
+    position: absolute;
+    background-image: url("../assets/Azure_Icon.png");
+    height: 97px;
+    width: 86px;
+    background-size: cover;
+    top: 350px;
+    right: 350px;
+    transition: 1.5s ease;
+}
+
+.imagedata:hover .patternazure {
+    transform: translate(250px, -60px) scale(0.95);
+}
+
+.imagedata .patternrabbitmq {
+    position: absolute;
+    background-image: url("../assets/Rabbit_Icon.png");
+    height: 97px;
+    width: 86px;
+    background-size: cover;
+    top: 350px;
+    right: 350px;
+    transition: 1.5s ease;
+}
+
+.imagedata:hover .patternrabbitmq {
+    transform: translate(-220px, 50px) scale(0.95);
 }
 </style>

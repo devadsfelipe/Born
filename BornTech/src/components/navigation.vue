@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 8vh;">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,12 +19,7 @@
           <router-link to="/skills" class="nav-link">Skills</router-link>
           <router-link to="/contact" class="nav-link">Contact</router-link>
         </div>
-        <!-- <div class="navbar-nav ms-auto"> -->
-          <!-- <div class="socialmidia">
-            <a href="#"><i class="fab fa-linkedin nav-link"></i></a>
-            <a href="#"><i class="fab fa-instagram nav-link"></i></a>
-            <a href="#"><i class="fab fa-github nav-link"></i></a>
-          </div> -->
+        <!-- <div class="navbar-nav ms-auto"> -->       
           <!-- <div class="toggleSwitches ">
             <a><i class="fa fa-sun"></i></a>
             <i class="fa fa-moon"></i>
@@ -70,24 +65,6 @@
   text-decoration: none;
   color: var(--bs-navbar-color)
 }
-
-.socialmidia a{
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.socialmidia i {
-    cursor: pointer;
-    color: var(--textcolor);
-    transition: 0.3s ease;
-}
-
-.socialmidia i:hover {
-    font-size: 120%;
-    padding: 0px 10px;
-    color: var(--primary);
-}
-
 
 /* .selectLanguage {
   font-weight: 500;
