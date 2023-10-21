@@ -3,27 +3,26 @@ import navigation from './components/navigation.vue';
 </script>
 
 <template>
-  <div class="container">
-    <navigation></navigation>
-    <router-view></router-view>
+  <div id="header">
+    <div class="container">
+      <navigation></navigation>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <style scoped>
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../src/assets/background.png);
+  background-size: cover;
+  background-position: center;
 }
 
-.container {
-  max-width: 100%;
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  background: var(--secondary);
-  padding: 0%;
+.container{
+  padding: 10px 10 ;
+  min-width: 100% !important;
+  max-width: 100% !important;
 }
 </style>
