@@ -1,28 +1,16 @@
 <script setup>
-import navigation from './components/navigation.vue';
+import home from '../src/views/home.vue';
+import about from '../src/views/about.vue';
+import skills from '../src/views/skills.vue';
+import contact from '../src/views/contact.vue';
 </script>
 
 <template>
-  <div id="header">
-    <div class="container">
-      <navigation></navigation>
-      <router-view></router-view>
-    </div>
-  </div>
+  <home></home>
+  <about></about>
+  <skills></skills>
+  <contact></contact>
 </template>
 
-<style scoped>
-#header {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../src/assets/background.png);
-  background-size: cover;
-  background-position: center;
-}
 
-.container{
-  padding: 10px 10 ;
-  min-width: 100% !important;
-  max-width: 100% !important;
-}
-</style>
+<style scoped></style>
