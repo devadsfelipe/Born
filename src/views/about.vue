@@ -12,14 +12,15 @@
                         dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
                         convallis. Aliquam erat volutpat. Suspendisse potenti. Integer nec dictum lectus. Sed rhoncus ac ex
                         non interdum. Nunc pellentesque, urna finibus iaculis faucibus, urna magna tincidunt est, sed
-                        placerat massa purus tincidunt dolor. Mauris eget justo sapien. Nullam sit amet lacus nunc. Praesent
-                        tincidunt turpis ut libero tempor, at imperdiet mauris sollicitudin. Sed vel mi vel ipsum semper
-                        porttitor ac et elit. Maecenas at mi nisl.</p>
+                        placerat massa purus tincidunt dolor.</p>
 
                     <div class="tab-titles">
-                        <p :class="[showSkills ? 'tab-links active-link' : 'tab-links']" @click="setTabContent('showSkills')">Skills</p>
-                        <p :class="[showExperience ? 'tab-links active-link' : 'tab-links']" @click="setTabContent('showExperience')">Experience</p>
-                        <p :class="[showCertifications ? 'tab-links active-link' : 'tab-links']" @click="setTabContent('showCertifications')">Certifications</p>
+                        <p :class="[showSkills ? 'tab-links active-link' : 'tab-links']"
+                            @click="setTabContent('showSkills')">Skills</p>
+                        <p :class="[showExperience ? 'tab-links active-link' : 'tab-links']"
+                            @click="setTabContent('showExperience')">Experience</p>
+                        <p :class="[showCertifications ? 'tab-links active-link' : 'tab-links']"
+                            @click="setTabContent('showCertifications')">Certifications</p>
                     </div>
                     <div v-if="showSkills" id="skills" class="tab-contents active-tab">
                         <ul>
@@ -123,7 +124,7 @@ function setTabContent(tabContent) {
     position: relative;
 }
 
-.tab-links:hover{
+.tab-links:hover {
     transition: 1.5s ease;
     transform: scale(0.9);
 }
@@ -139,14 +140,9 @@ function setTabContent(tabContent) {
     transition: 0.5s;
 }
 
-
 .tab-links.active-link::after {
     width: 50%;
 }
-
-/* .tab-contents {
-    display: none;
-} */
 
 .tab-contents ul {
     margin: 0px;
@@ -165,5 +161,4 @@ function setTabContent(tabContent) {
 
 .tab-contents.active-tab {
     display: block;
-}
-</style>
+}</style>
