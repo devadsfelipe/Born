@@ -4,36 +4,41 @@
 
 <template>
   <nav class="navbar navbar-expand-lg">
-      <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- <a href="#" class="logo"><b>F.</b>elps</a> -->
-        </div>
-        <div class="navbar-nav ms-auto">
-          <router-link to="/" class="nav-link">Home</router-link>
-          <router-link to="/about" class="nav-link">About</router-link>
-          <router-link to="/skills" class="nav-link">Skills</router-link>
-          <router-link to="/contact" class="nav-link">Contact</router-link>
-        </div>
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+      aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- <div class="navbar-nav">
+        <a href="#" class="logo"><b>F.</b>elps</a>
+      </div> -->
+      <div class="navbar-nav ms-auto">
+        <a to="/" class="nav-link">Home</a>
+        <a to="/about" class="nav-link">About</a>
+        <a to="/skills" class="nav-link">Skills</a>
+        <a to="/contact" class="nav-link">Contact</a>
       </div>
+    </div>
   </nav>
 </template>
 
 <style scoped>
 
+.navbar-nav{
+  margin: 0px;
+}
 .nav-link {
   font-weight: 400;
   transition: 0.3s ease;
   color: var(--secondary);
-  margin: 10px 0px 0px 30px ;
-}z
+  margin: 5px 0px 0px 30px;
+  cursor: pointer;
+}
 
 .nav-link:hover {
-  font-size: 110%;
-  color: var(--secondary);
+  font-size: 100%;
+  color: var(--fifth);
+  transform: scale(1.30);
 }
 
 .navbar-toggler.custom-toggler {
@@ -49,11 +54,11 @@
 }
 
 .logo b {
-  color: var(--primary);
+  color: var(--fifth);
 }
 
 .logo b:hover {
-  color: var(--primary);
+  color: var(--fifth);
   transition: 0.9s ease;
   font-size: 180%;
 }

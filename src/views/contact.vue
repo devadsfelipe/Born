@@ -13,6 +13,9 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
+                    <div>
+                        <a href="assests/my-cv.pdf" download class="btn">Download CV</a>
+                    </div>
                 </div>
                 <div class="contact-right">
                     <form>
@@ -24,6 +27,9 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Felipe Oliveira. 2024</p>
         </div>
     </div>
 </template>
@@ -58,12 +64,82 @@
     margin-top: 30px;
 }
 
-.social-icons a{
+.social-icons a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
     color: var(--fifth);
+    display: inline-block;
 }
 
+.social-icons a:hover {
+    color: var(--fifth);
+    transform: translateY(-5px)
+}
 
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 40px 0px;
+    background: var(--fifth);
+    color: var(--secondary);
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    background: var(--fifth);
+    transition: 0.5s ease;
+    transform: scale(0.9);
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: var(--secondary);
+}
+
+.contact-right button{
+    position: relative;
+    display: inline-block;
+    margin: 40px 10px;
+    background: var(--fifth);
+    color: var(--secondary);
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+}
+
+.contact-right button:hover {
+    background: var(--fifth);
+    transition: 0.5s ease;
+    transform: scale(0.9);
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 5px 0;
+    font-weight: 300;
+    margin-top: 20px;
+    background: var(--third);
+
+}
 </style>

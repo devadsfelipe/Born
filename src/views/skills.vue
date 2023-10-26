@@ -61,7 +61,7 @@
 
 .skills-list div:hover {
     background: var(--fifth);
-    transform: translateY(-10px)
+    transform: translateY(-10px);
 }
 
 .skills-list div h2 {
@@ -118,30 +118,4 @@
     transition: 0.5s ease;
     transform: scale(0.9);
 }
-
-/* .skills-list div img {
-    animation:
-    20s linear 2s infinite alternate rise,
-    20s linear 2s infinite alternate bounce;
-}
-
-@keyframes rise {
-  from {
-    transform: translateX(20vw);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes bounce {
-  from {
-    transform: translateX(0vw);
-  }
-  to {
-    transform: translateX(10vw);
-  }
-} */
-
-
 </style>
