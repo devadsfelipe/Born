@@ -3,62 +3,67 @@
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 8vh;">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a href="#" class="logo"><b>F.</b>elps</a>
-        </div>
-        <div class="navbar-nav ms-auto">
-          <router-link to="/" class="nav-link">Home</router-link>
-          <router-link to="/about" class="nav-link">About</router-link>
-          <router-link to="/skills" class="nav-link">Skills</router-link>
-          <router-link to="/contact" class="nav-link">Contact</router-link>
-        </div>
-        <!-- <div class="navbar-nav ms-auto"> -->       
-          <!-- <div class="toggleSwitches ">
-            <a><i class="fa fa-sun"></i></a>
-            <i class="fa fa-moon"></i>
-            <a class="selectLanguage">English</a>
-          </div> -->
-        <!-- </div> -->
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+      aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- <div class="navbar-nav">
+        <a href="#" class="logo"><b>F.</b>elps</a>
+      </div> -->
+      <div class="navbar-nav ms-auto">
+        <a to="/" class="nav-link">Home</a>
+        <a to="/about" class="nav-link">About</a>
+        <a to="/skills" class="nav-link">Skills</a>
+        <a to="/contact" class="nav-link">Contact</a>
       </div>
     </div>
   </nav>
 </template>
 
 <style scoped>
+
+.navbar-nav{
+  margin: 0 3%;
+}
+.nav-link {
+  font-weight: 400;
+  transition: 0.3s ease;
+  color: var(--off-white);
+  margin: 5px 0px 0px 30px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  font-size: 100%;
+  color: var(--light-purple);
+  transform: scale(1.30);
+}
+
+/* .navbar-toggler.custom-toggler {
+  background: var(--secondary);
+} */
+
 .logo {
   font-family: 'Roboto';
   font-size: 25px;
-  color: var(--textcolor);
+  color: var(--off-white);
   font-weight: 400;
   text-decoration: none;
 }
 
 .logo b {
-  color: var(--primary);
+  color: var(--light-purple);
 }
 
 .logo b:hover {
-  color: var(--primary);
+  color: var(--light-purple);
   transition: 0.9s ease;
   font-size: 180%;
 }
 
-.nav-link{
-  font-weight: 400;
-  transition: 0.3s ease;
-}
 
-.nav-link:hover {
-    font-size: 110%;
-    color: var(--primary);
-}
 
 .socialmidia {
   display: flex;

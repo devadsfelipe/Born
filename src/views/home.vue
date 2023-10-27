@@ -1,49 +1,81 @@
 <script setup>
-
+import navigation from '../components/navigation.vue';
 </script>
 
 <template>
-    <div class="row">
-        <div class="cols textdata">
-            <h2>Olá, sou o <span>Felipe</span></h2>
-            <div style="margin-left: 15px;">
-                <h3>Full Stack Developer</h3>
-                <p>Sou fascinado em <b>solucionar problemas</b> complexos e <b>prospectar soluções</b> inovadoras com
-                    uso da
-                    tecnologia. Desbravador de otimizações de recursos financeiros através da <b>Cloud Computing</b>
-                    para
-                    chegar o mais perto possível do equilibrio entre custo/operação
-                </p>
-                <div class="btn">
-                    <button>Download CV</button>
+    <div id="home">
+        <div class="container">
+            <navigation class="navigation"></navigation>
+            <div class="row">
+                <div class="cols textdata">
+                    <p>FullStack Developer</p>
+                    <h1>Olá, eu sou o <span>Felipe</span></h1>
                 </div>
-                <div class="socialmidia">
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-github"></i>
+                <div class="cols imagedata">
+                    <div class="pattern-front"></div>
+                    <div class="imgbox">
+                        <img src="../assets/background_me.png" alt="">
+                    </div>
+                    <div class="pattern-back"></div>
                 </div>
             </div>
-        </div>
-        <div class="cols imagedata">
-            <div class="imgbox">
-                <img src="../assets/photo-me.png">
-            </div>
-            <div class="patterncsharp"></div>
-            <div class="patternvuejs"></div>
-            <div class="patternjs"></div>
-            <div class="patternazure"></div>
-            <div class="patternrabbitmq"></div>
         </div>
     </div>
 </template>
 
 <style scoped>
+* {
+    padding: 0% !important;
+    margin: 0% !important;
+    max-height: 100vh !important;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    max-width: 100%;
+    background: linear-gradient( rgba(0, 0, 0), var(--deep-purple));
+
+}
+
+.navigation {
+    z-index: 5;
+}
+
 .row {
-    margin-top: 10vh;
     position: relative;
     display: flex;
     width: 100%;
-    margin-left: 30px;
+    height: 100%;
+}
+
+.row .textdata {
+    z-index: 4;
+    padding-left: 60px !important;
+    padding-bottom: 10% !important;
+    color: var(--light-purple);
+    
+}
+
+.row .textdata h1 {
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.row .textdata h1 span {
+    color: var(--off-white);
+    font-weight: 800;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+}
+
+.row .textdata p {
+    font-size: 1.3em;
+    letter-spacing: 0.08em;
+    margin-left: 1% !important;
+    color: var(--off-white);
 }
 
 .cols {
@@ -53,176 +85,75 @@
     justify-content: center;
 }
 
-.textdata a {
-    text-decoration: none;
-}
-
-.textdata h2 {
-    font-family: 'Tilt Neon', sans-serif;
-    color: var(--textcolor);
-    font-size: 3em;
-    font-weight: 400;
-    z-index: 1111;
-}
-
-.textdata h2 span {
-    color: var(--primary);
-    font-weight: 900;
-}
-
-.textdata h3 {
-    font-family: 'Tilt Neon', sans-serif;
-    color: var(--textcolor);
-    font-size: 1.5em;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
-.textdata p {
-    font-size: 1em;
-    font-weight: 400;
-    margin: 20px 0;
-    color: var(--textcolor);
-    line-height: 30px;
-}
-
-.textdata p b {
-    color: var(--primary);
-}
-
-.textdata .btn {
-    width: 100%;
-    margin: 20px 0px 130px;
-    padding: 0px;
-    text-align: start;
-    min-width: 170px;
-}
-
-.btn button {
-    border: none;
-    min-width: 60px;
-    background: var(--primary);
-    color: var(--secondary);
-    font-size: 15px;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    padding: 10px 30px;
-    box-shadow: 0 10px 20px 0 var(--textcolor);
-    cursor: pointer;
-}
-
-.btn button:hover {
-    transition: 0.4s ease;
-    padding: 10px 90px;
-}
-
-.socialmidia {
-    height: 5vh;
-}
-
-.socialmidia i {
-    font-size: 1.5em;
-    margin-right: 20px;
-    cursor: pointer;
-    color: var(--textcolor);
-    transition: 0.3s ease;
-}
-
-.socialmidia i:hover {
-    font-size: 2.5em;
-    color: var(--primary);
-}
-
 .imagedata {
     overflow: hidden;
 }
 
 .imgbox {
+    position: relative;
+    width: 100%;
+    left: 15%;
     z-index: 1;
-    transition: 0.9s ease;
+    transition: 3s ease;
 }
 
 .imgbox img {
-    width: 70vh;
-    margin-left: 10vh;
+    padding-top: 100px;
+    width: 100%;
 }
 
 .imagedata:hover .imgbox {
-    transform: scale(0.95);
+    transform: translateX(-20px);
 }
 
-.imagedata .patterncsharp {
+.imagedata .pattern-back {
     position: absolute;
-    background-image: url("../assets/C_Sharp_Icon.png");
-    height: 97px;
-    width: 86px;
+    background: url('../src/assets/background_splash_back.png');
+    height: 100%;
+    width: 90%;
     background-size: cover;
-    top: 350px;
-    right: 350px;
-    transition: 1.5s ease;
+    left: 40%;
+    top: 40px;
+    transition: 4s ease;
 }
 
-.imagedata:hover .patterncsharp {
-    transform: translate(-100px, -300px) scale(0.95);
+.imagedata:hover .pattern-back {
+    transform: translateX(+10px);
+    transform: scale(1.3);
 }
 
-.imagedata .patternvuejs {
+.imagedata .pattern-front {
     position: absolute;
-    background-image: url("../assets/Vue_Icon.png");
-    height: 97px;
-    width: 86px;
+    background: url('../src/assets/background_splash_front.png');
+    height: 100%;
+    max-height: 320px !important;
+    width: 60%;
+    z-index: 2;
+    top: 55%;
     background-size: cover;
-    top: 350px;
-    right: 350px;
-    transition: 1.5s ease;
+    transition: 3s ease;
 }
 
-.imagedata:hover .patternvuejs {
-    transform: translate(-220px, -120px) scale(0.95);
+.imagedata:hover .pattern-front {
+    transform: translateX(40px);
+    transform: scale(0.8);
 }
 
-.imagedata .patternjs {
-    position: absolute;
-    background-image: url("../assets/JS_Icon.png");
-    height: 97px;
-    width: 86px;
-    background-size: cover;
-    top: 350px;
-    right: 350px;
-    transition: 1.5s ease;
-}
 
-.imagedata:hover .patternjs {
-    transform: translate(150px, -230px) scale(0.95);
-}
+/*---- Small Screens ----*/
+@media only screen and (max-width: 600px) {
+    #home {
+        background-image: url(../src/assets/phone-background2.png);
+    }
 
-.imagedata .patternazure {
-    position: absolute;
-    background-image: url("../assets/Azure_Icon.png");
-    height: 97px;
-    width: 86px;
-    background-size: cover;
-    top: 350px;
-    right: 350px;
-    transition: 1.5s ease;
-}
+    .home-text {
+        margin-top: 150%;
+        font-size: 10px;
+    }
 
-.imagedata:hover .patternazure {
-    transform: translate(250px, -60px) scale(0.95);
-}
+    .home-text h1 {
+        font-size: 5em;
+    }
 
-.imagedata .patternrabbitmq {
-    position: absolute;
-    background-image: url("../assets/Rabbit_Icon.png");
-    height: 97px;
-    width: 86px;
-    background-size: cover;
-    top: 350px;
-    right: 350px;
-    transition: 1.5s ease;
-}
-
-.imagedata:hover .patternrabbitmq {
-    transform: translate(-220px, 50px) scale(0.95);
 }
 </style>
