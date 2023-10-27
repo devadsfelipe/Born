@@ -82,9 +82,10 @@ function setTabContent(tabContent) {
 
 <style scoped>
 #about {
-    background: rgb(0, 0, 0);
-    padding: 80px 0;
-    color: #ababab;
+    background: linear-gradient(var(--deep-purple), rgba(0, 0, 0));
+    /* background: var(--deep-purple); */
+    padding: 120px 0;
+    color: var(--off-white);
 }
 
 .row {
@@ -108,7 +109,7 @@ function setTabContent(tabContent) {
 .about-col-2 h1 {
     font-size: 3em;
     font-weight: 500;
-    color: var(--secondary)
+    color: var(--off-white)
 }
 
 .tab-titles {
@@ -133,7 +134,7 @@ function setTabContent(tabContent) {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--fifth);
+    background: var(--light-purple);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -155,7 +156,7 @@ function setTabContent(tabContent) {
 }
 
 .tab-contents ul li span {
-    color: var(--fourth);
+    color: var(--light-purple);
     font-size: 14px;
 }
 

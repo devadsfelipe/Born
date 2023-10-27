@@ -35,11 +35,10 @@
 </template>
 
 <style scoped>
-#projects {
-    background: rgb(0, 0, 0);
-    padding: 50px 0;
-    color: #ababab;
-    color: var(--secondary);
+#contact {
+    background: var(--deep-black);
+    padding: 100px 0 20px 0;
+    color: var(--off-white);
 }
 
 .contact-left {
@@ -55,7 +54,7 @@
 }
 
 .contact-left p i {
-    color: var(--fifth);
+    color: var(--purple);
     margin-right: 15px;
     font-size: 25px;
 }
@@ -68,12 +67,12 @@
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: var(--fifth);
+    color: var(--purple);
     display: inline-block;
 }
 
 .social-icons a:hover {
-    color: var(--fifth);
+    color: var(--light-purple);
     transform: translateY(-5px)
 }
 
@@ -81,8 +80,8 @@
     position: relative;
     display: inline-block;
     margin: 40px 0px;
-    background: var(--fifth);
-    color: var(--secondary);
+    background: var(--purple);
+    color: var(--off-white);
     border-radius: 2px;
     font-size: 15px;
     font-weight: 300;
@@ -90,7 +89,8 @@
 }
 
 .btn:hover {
-    background: var(--fifth);
+    background: var(--light-purple);
+    color: var(--off-white);
     transition: 0.5s ease;
     transform: scale(0.9);
 }
@@ -108,15 +108,15 @@ form input, form textarea{
     margin: 10px;
     border-radius: 5px;
     font-size: 15px;
-    color: var(--secondary);
+    color: var(--gray);
 }
 
 .contact-right button{
     position: relative;
     display: inline-block;
     margin: 40px 10px;
-    background: var(--fifth);
-    color: var(--secondary);
+    background: var(--purple);
+    color: var(--off-white);
     border: none;
     border-radius: 2px;
     font-size: 15px;
@@ -128,7 +128,8 @@ form input, form textarea{
 }
 
 .contact-right button:hover {
-    background: var(--fifth);
+    background: var(--light-purple);
+    color: var(--off-white);
     transition: 0.5s ease;
     transform: scale(0.9);
 }
@@ -139,7 +140,6 @@ form input, form textarea{
     padding: 20px 0 5px 0;
     font-weight: 300;
     margin-top: 20px;
-    background: var(--third);
-
+    color: var(--off-white);
 }
 </style>

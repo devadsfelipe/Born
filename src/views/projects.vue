@@ -43,10 +43,9 @@
 
 <style scoped>
 #projects {
-    background: rgb(0, 0, 0);
-    padding: 50px 0;
-    color: #ababab;
-    color: var(--secondary);
+    background: linear-gradient(var(--deep-purple), rgba(0, 0, 0));
+    padding: 70px 0;
+    color: var(--off-white);
 }
 
 .projects-list {
@@ -80,7 +79,7 @@
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--fifth));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), var(--light-purple));
     border-radius: 10px;
     position: absolute;
     left: 0;

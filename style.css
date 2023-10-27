@@ -1,12 +1,23 @@
 
 :root{
+  --deep-black: #000;
+  --white: #ffffff;
+  --purple: #820ad1;
+  --medium-purple: #4c0677;
+  --deep-purple: #2f0549;
+  --light-purple: #bd0fea;
+  --off-white: #f4f4f4;
+  --gray: #e4e4e4
+}
+
+/* :root{
   --primary: #080808;
   --secondary: #ffffff;
   --third: #424141;
   --fourth: #b54769;
   --fifth: #ff004f;
   --sixth: #262626;
-}
+} */
 
 *{
   margin: 0;

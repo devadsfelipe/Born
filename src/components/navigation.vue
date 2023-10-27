@@ -25,40 +25,40 @@
 <style scoped>
 
 .navbar-nav{
-  margin: 0px;
+  margin: 0 3%;
 }
 .nav-link {
   font-weight: 400;
   transition: 0.3s ease;
-  color: var(--secondary);
+  color: var(--off-white);
   margin: 5px 0px 0px 30px;
   cursor: pointer;
 }
 
 .nav-link:hover {
   font-size: 100%;
-  color: var(--fifth);
+  color: var(--light-purple);
   transform: scale(1.30);
 }
 
-.navbar-toggler.custom-toggler {
+/* .navbar-toggler.custom-toggler {
   background: var(--secondary);
-}
+} */
 
 .logo {
   font-family: 'Roboto';
   font-size: 25px;
-  color: var(--textcolor);
+  color: var(--off-white);
   font-weight: 400;
   text-decoration: none;
 }
 
 .logo b {
-  color: var(--fifth);
+  color: var(--light-purple);
 }
 
 .logo b:hover {
-  color: var(--fifth);
+  color: var(--light-purple);
   transition: 0.9s ease;
   font-size: 180%;
 }

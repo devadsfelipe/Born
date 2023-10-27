@@ -10,25 +10,25 @@
                     <h2>Back-end</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
                         dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
+                        convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
+                        dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
                         convallis.</p>
-                    <img id="backendImageCSharp" src="../assets/C_Sharp_Icon.png">
-                    <img id="backendImageRabbit" src="../assets/Rabbit_Icon.png">
                 </div>
                 <div>
                     <h2>Front-end</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
                         dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
+                        convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
+                        dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
                         convallis.</p>
-                    <img id="frontendImageJavaScript" src="../assets/JS_Icon.png">
-                    <img id="frontendImageVueJS" src="../assets/Vue_Icon.png">
-                    <!-- <img id="frontendImageKnockoutJS" src="../assets/.png"> -->
                 </div>
                 <div>
                     <h2>Cloud Computing</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
                         dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
+                        convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
+                        dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
                         convallis.</p>
-                    <img id="cloudImage" src="../assets/Azure_icon.png">
                 </div>
             </div>
         </div>
@@ -37,10 +37,9 @@
 
 <style scoped>
 #skills {
-    background: rgb(0, 0, 0);
+    background: linear-gradient( rgba(0, 0, 0), var(--deep-purple));
     padding: 40px 0;
-    color: #ababab;
-    color: var(--secondary);
+    color: var(--off-white);
 }
 
 .skills-list {
@@ -51,7 +50,7 @@
 }
 
 .skills-list div {
-    background: var(--sixth);
+    background: var(--medium-purple);
     padding: 40px;
     font-size: 15px;
     font-weight: 300;
@@ -60,7 +59,7 @@
 }
 
 .skills-list div:hover {
-    background: var(--fifth);
+    background: var(--purple);
     transform: translateY(-10px);
 }
 
@@ -70,52 +69,4 @@
     border-bottom: 15px;
 }
 
-#backendImageCSharp {
-    margin: 30px 20px 0 0;
-    width: 20%;
-    border: none;
-    border-radius: 20%;
-    padding-inline: 4px;
-    background: var(--secondary);
-}
-
-#backendImageRabbit {
-    margin-top: 30px;
-    width: 22%;
-    border: none;
-    border-radius: 20%;
-    padding-inline: 3px;
-    background: var(--secondary);
-}
-
-#frontendImageJavaScript {
-    margin: 30px 20px 0 0;
-    width: 20%;
-    border: none;
-    border-radius: 20%;
-    padding-inline: 4px;
-    background: var(--secondary);
-}
-
-#frontendImageVueJS {
-    margin-top: 30px;
-    width: 20%;
-    border: none;
-    border-radius: 20%;
-    padding-inline: 4px;
-    background: var(--secondary);
-}
-
-#cloudImage {
-    width: 20%;
-    margin-top: 30px;
-    border: none;
-    border-radius: 20%;
-    background: var(--secondary);
-}
-
-.skills-list div img:hover {
-    transition: 0.5s ease;
-    transform: scale(0.9);
-}
 </style>
