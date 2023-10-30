@@ -43,7 +43,7 @@
 
 <style scoped>
 #projects {
-    background: linear-gradient(var(--deep-purple), rgba(0, 0, 0));
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
     padding: 70px 0;
     color: var(--off-white);
 }

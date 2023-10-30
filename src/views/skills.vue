@@ -37,7 +37,7 @@
 
 <style scoped>
 #skills {
-    background: linear-gradient( rgba(0, 0, 0), var(--deep-purple));
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
     padding: 40px 0;
     color: var(--off-white);
 }
@@ -50,16 +50,16 @@
 }
 
 .skills-list div {
-    background: var(--medium-purple);
+    background: var(--purple);
     padding: 40px;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
 }
 
 .skills-list div:hover {
-    background: var(--purple);
+    background: var(--light-purple);
     transform: translateY(-10px);
 }
 

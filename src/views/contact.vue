@@ -36,7 +36,7 @@
 
 <style scoped>
 #contact {
-    background: var(--deep-black);
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
     padding: 100px 0 20px 0;
     color: var(--off-white);
 }
@@ -69,6 +69,7 @@
     margin-right: 15px;
     color: var(--purple);
     display: inline-block;
+    transition: 0.5s ease;
 }
 
 .social-icons a:hover {
@@ -84,15 +85,13 @@
     color: var(--off-white);
     border-radius: 2px;
     font-size: 15px;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .btn:hover {
-    background: var(--light-purple);
-    color: var(--off-white);
+    background: var(--purple);
     transition: 0.5s ease;
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 
 .contact-right form{
@@ -109,36 +108,34 @@ form input, form textarea{
     border-radius: 5px;
     font-size: 15px;
     color: var(--gray);
+    font-weight: 500;
 }
 
 .contact-right button{
     position: relative;
     display: inline-block;
-    margin: 40px 10px;
+    margin: 20px 10px;
     background: var(--purple);
     color: var(--off-white);
     border: none;
     border-radius: 2px;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 2px;
     width: 100%;
     padding: 10px;
-    height: 100%;
 }
 
 .contact-right button:hover {
-    background: var(--light-purple);
-    color: var(--off-white);
     transition: 0.5s ease;
-    transform: scale(0.9);
+    transform: scale(1.02);
 }
 
 .copyright{
     width: 100%;
     text-align: center;
     padding: 20px 0 5px 0;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 20px;
     color: var(--off-white);
 }

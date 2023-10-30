@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="../assets/user.png">
+                    <img src="../assets/phone-background2.png">
                 </div>
                 <div class="about-col-2">
                     <h1>About Me</h1>
@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, watch } from 'vue'
+import { ref} from 'vue'
 
 const showSkills = ref(true);
 const showExperience = ref(false);
@@ -79,13 +79,12 @@ function setTabContent(tabContent) {
 
 </script>
 
-
 <style scoped>
 #about {
-    background: linear-gradient(var(--deep-purple), rgba(0, 0, 0));
-    /* background: var(--deep-purple); */
-    padding: 120px 0;
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);    
+    padding: 30% 0;
     color: var(--off-white);
+    font-family: 'Roboto', sans-serif;
 }
 
 .row {
