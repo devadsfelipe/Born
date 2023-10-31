@@ -36,7 +36,7 @@ function setNavContent(activeContent) {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,8 +66,8 @@ function setNavContent(activeContent) {
   float: right;
 }
 
-.navbar-nav {
-  margin: 0 3%;
+.navbar {
+  background: transparent !important;
 }
 
 .nav-link {
@@ -80,20 +80,17 @@ function setNavContent(activeContent) {
 }
 
 
-.nav-link.active-link
-{
+.nav-link.active-link {
+  color: var(--light-purple) !important;
+  transform: scale(1.20);
+ 
+}
+
+.nav-link:hover {
   color: var(--light-purple) !important;
   transform: scale(1.20);
 }
 
-.nav-link:hover{
-  color: var(--light-purple) !important;
-  transform: scale(1.20);
-}
-
-.navbar-toggler.custom-toggler {
-  background: var(--off-white);
-}
 
 .socialmidia {
   display: flex;
@@ -109,10 +106,34 @@ function setNavContent(activeContent) {
 
 
 @media only screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+    float: left !important;
+  }
+
   .nav-link {
     font-weight: 500;
     font-size: 20px;
     margin: 10px 0px 0px 30px;
+  }
+
+  .navbar-toggler{
+    float: right !important;
+  }
+  .bg-dark {
+    background-color: transparent !important;
+  }
+
+  .navbar-collapse .collapse .show{
+    width: 100% !important;
+  }
+  .nav-link.active-link {
+    background: var(--medium-purple);
+    border-radius: 10px;
+    padding-left: 15px;
+    color: var(--off-white) !important;
+    width: 100%;
   }
 }
 </style>

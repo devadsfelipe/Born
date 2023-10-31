@@ -1,7 +1,7 @@
 <template>
     <div id="home">
         <div class="container">
-            <navigation class="navigation"></navigation>
+            <navigation></navigation>
             <div class="row">
                 <div class="col">
                     <p>FullStack Developer</p>
@@ -193,6 +193,19 @@ onMounted(() => {
         width: 80%;
         max-width: 100%;
         left: 10%;
+    }
+
+    .navbar{
+        margin: 0;
+        position: fixed;
+        background: var(--purple) !important;
+        border: 2px solid lime;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding-top: 50px;
+        z-index: 1;
+
     }
 }
 </style>
