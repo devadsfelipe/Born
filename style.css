@@ -10,24 +10,9 @@
   --gray: #e4e4e4
 }
 
-/* :root{
-  --primary: #080808;
-  --secondary: #ffffff;
-  --third: #424141;
-  --fourth: #b54769;
-  --fifth: #ff004f;
-  --sixth: #262626;
-} */
-
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-}
-
-body{
-  background: var(--primary);
-  color: var(--secondary);
+  font-family: 'Montserrat', sans-serif;
 }
 

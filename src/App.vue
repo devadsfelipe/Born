@@ -15,4 +15,4 @@ import contact from '../src/views/contact.vue';
 </template>
 
 
-<style scoped></style>
+<style></style>

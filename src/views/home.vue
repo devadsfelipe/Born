@@ -1,159 +1,211 @@
-<script setup>
-import navigation from '../components/navigation.vue';
-</script>
-
 <template>
     <div id="home">
         <div class="container">
-            <navigation class="navigation"></navigation>
+            <navigation></navigation>
             <div class="row">
-                <div class="cols textdata">
+                <div class="col">
                     <p>FullStack Developer</p>
-                    <h1>Olá, eu sou o <span>Felipe</span></h1>
-                </div>
-                <div class="cols imagedata">
-                    <div class="pattern-front"></div>
-                    <div class="imgbox">
-                        <img src="../assets/background_me.png" alt="">
+                    <h1>Hi! I'm <span>Felipe</span></h1>
+                    <div class="scroll">
+                        <div class="scroller">
+                            <ul class="tag-list scroller__inner">
+                                <li>C#</li>
+                                <li>.Net</li>
+                                <li>VueJS</li>
+                                <li>Microsoft Azure</li>
+                                <li>SQL Server</li>
+                                <li>JavaScript</li>
+                                <li>CSS</li>
+                                <li>KnockoutJS</li>
+                                <li>HTML</li>
+                                <li>JQuery</li>
+                                <li>DevOps</li>
+                                <li>Agile</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="pattern-back"></div>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
+
+<script setup>
+import { onMounted } from 'vue';
+import navigation from '../components/navigation.vue';
+
+onMounted(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+    };
+
+    function addAnimation() {
+        const scrollers = document.querySelectorAll(".scroller");
+        scrollers.forEach((scroller) => {
+            // add data-animated="true" to every `.scroller` on the page
+            scroller.setAttribute("data-animated", true);
+
+            // Make an array from the elements within `.scroller-inner`
+            const scrollerInner = scroller.querySelector(".scroller__inner");
+            const scrollerContent = Array.from(scrollerInner.children);
+
+            // For each item in the array, clone it
+            // add aria-hidden to it
+            // add it into the `.scroller-inner`
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true);
+                duplicatedItem.setAttribute("aria-hidden", true);
+                scrollerInner.appendChild(duplicatedItem);
+            });
+        });
+    };
+});
+</script>
+
+
 <style scoped>
 * {
-    padding: 0% !important;
-    margin: 0% !important;
-    max-height: 100vh !important;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     position: relative;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     max-width: 100%;
-    background: linear-gradient( rgba(0, 0, 0), var(--deep-purple));
-
-}
-
-.navigation {
-    z-index: 5;
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
 }
 
 .row {
     position: relative;
     display: flex;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
-.row .textdata {
-    z-index: 4;
-    padding-left: 60px !important;
-    padding-bottom: 10% !important;
-    color: var(--light-purple);
-    
+.col {
+    max-width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 25vh;
+    color: var(--off-white);
 }
 
-.row .textdata h1 {
+.col h1 {
     font-weight: 600;
     font-size: 4rem;
+    color: var(--light-purple);
 }
 
-.row .textdata h1 span {
-    color: var(--off-white);
+.col h1 span {
     font-weight: 800;
-    font-size: 4.5rem;
-    letter-spacing: 1px;
-}
-
-.row .textdata p {
-    font-size: 1.3em;
-    letter-spacing: 0.08em;
-    margin-left: 1% !important;
+    font-size: 6rem;
+    letter-spacing: 3px;
     color: var(--off-white);
 }
 
-.cols {
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.col p {
+    font-size: 1.2em;
+    letter-spacing: 0.08em;
+    margin-bottom: 0;
 }
 
-.imagedata {
-    overflow: hidden;
+.tag-list {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
 }
 
-.imgbox {
+.tag-list li {
+    padding: 1rem;
+    background: var(--purple);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 3rem -0.25rem hsl(218, 33%, 9%);
+}
+
+.scroll {
     position: relative;
     width: 100%;
-    left: 15%;
-    z-index: 1;
-    transition: 3s ease;
 }
 
-.imgbox img {
-    padding-top: 100px;
-    width: 100%;
-}
-
-.imagedata:hover .imgbox {
-    transform: translateX(-20px);
-}
-
-.imagedata .pattern-back {
+.scroller {
+    /* border: 3px solid var(--purple); */
     position: absolute;
-    background: url('../src/assets/background_splash_back.png');
-    height: 100%;
-    width: 90%;
-    background-size: cover;
-    left: 40%;
-    top: 40px;
-    transition: 4s ease;
+    right: 30%;
+    max-width: 40%;
 }
 
-.imagedata:hover .pattern-back {
-    transform: translateX(+10px);
-    transform: scale(1.3);
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.imagedata .pattern-front {
-    position: absolute;
-    background: url('../src/assets/background_splash_front.png');
-    height: 100%;
-    max-height: 320px !important;
-    width: 60%;
-    z-index: 2;
-    top: 55%;
-    background-size: cover;
-    transition: 3s ease;
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
 
-.imagedata:hover .pattern-front {
-    transform: translateX(40px);
-    transform: scale(0.8);
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
 }
 
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
 
 /*---- Small Screens ----*/
 @media only screen and (max-width: 600px) {
-    #home {
-        background-image: url(../src/assets/phone-background2.png);
+    .scroller {
+        width: 80%;
+        max-width: 100%;
+        left: 10%;
     }
 
-    .home-text {
-        margin-top: 150%;
-        font-size: 10px;
-    }
+    .navbar{
+        margin: 0;
+        position: fixed;
+        background: var(--purple) !important;
+        border: 2px solid lime;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding-top: 50px;
+        z-index: 1;
 
-    .home-text h1 {
-        font-size: 5em;
     }
-
 }
 </style>
