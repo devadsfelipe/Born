@@ -43,16 +43,11 @@ onMounted(() => {
     function addAnimation() {
         const scrollers = document.querySelectorAll(".scroller");
         scrollers.forEach((scroller) => {
-            // add data-animated="true" to every `.scroller` on the page
             scroller.setAttribute("data-animated", true);
 
-            // Make an array from the elements within `.scroller-inner`
             const scrollerInner = scroller.querySelector(".scroller__inner");
             const scrollerContent = Array.from(scrollerInner.children);
 
-            // For each item in the array, clone it
-            // add aria-hidden to it
-            // add it into the `.scroller-inner`
             scrollerContent.forEach((item) => {
                 const duplicatedItem = item.cloneNode(true);
                 duplicatedItem.setAttribute("aria-hidden", true);
@@ -65,30 +60,24 @@ onMounted(() => {
 
 
 <style scoped>
-* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
+#home{
+    width: 100%;
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
 
+}
 .container {
-    position: relative;
-    min-height: 100vh;
-    width: 100vw;
     overflow: hidden;
     max-width: 100%;
-    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
+    height: 100vh;
 }
 
 .row {
     position: relative;
     display: flex;
     width: 100vw;
-    height: 100vh;
 }
 
 .col {
-    max-width: 100%;
     position: absolute;
     text-align: center;
     top: 25vh;
@@ -136,7 +125,6 @@ onMounted(() => {
 }
 
 .scroller {
-    /* border: 3px solid var(--purple); */
     position: absolute;
     right: 30%;
     max-width: 40%;
@@ -193,19 +181,6 @@ onMounted(() => {
         width: 80%;
         max-width: 100%;
         left: 10%;
-    }
-
-    .navbar{
-        margin: 0;
-        position: fixed;
-        background: var(--purple) !important;
-        border: 2px solid lime;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        padding-top: 50px;
-        z-index: 1;
-
     }
 }
 </style>

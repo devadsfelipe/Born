@@ -45,15 +45,15 @@ function setNavContent(activeContent) {
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a :class="[homeActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('homeActive')"
-            aria-current="page" href="#">HOME</a>
-          <a :class="[aboutActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('aboutActive')"
-            aria-current="page" href="#">ABOUT</a>
+            aria-current="page" href="#home">HOME</a>
           <a :class="[skillsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('skillsActive')"
-            aria-current="page" href="#">SKILLS</a>
+            aria-current="page" href="#skills">SKILLS</a>
+            <a :class="[aboutActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('aboutActive')"
+            aria-current="page" href="#about">ABOUT</a>
           <a :class="[projectsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('projectsActive')"
-            aria-current="page" href="#">PROJECTS</a>
+            aria-current="page" href="#projects">PROJECTS</a>
           <a :class="[contactActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('contactActive')"
-            aria-current="page" href="#">CONTACT</a>
+            aria-current="page" href="#contact">CONTACT</a>
         </div>
       </div>
     </div>
@@ -107,34 +107,10 @@ function setNavContent(activeContent) {
 
 @media only screen and (max-width: 600px) {
   * {
-    margin: 0;
-    padding: 0;
-    float: left !important;
+    display: none;
   }
 
-  .nav-link {
-    font-weight: 500;
-    font-size: 20px;
-    margin: 10px 0px 0px 30px;
-  }
 
-  .navbar-toggler{
-    float: right !important;
-  }
-  .bg-dark {
-    background-color: transparent !important;
-  }
-
-  .navbar-collapse .collapse .show{
-    width: 100% !important;
-  }
-  .nav-link.active-link {
-    background: var(--medium-purple);
-    border-radius: 10px;
-    padding-left: 15px;
-    color: var(--off-white) !important;
-    width: 100%;
-  }
 }
 </style>
 

@@ -8,11 +8,12 @@
                 </div>
                 <div class="about-col-2">
                     <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
-                        dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
-                        convallis. Aliquam erat volutpat. Suspendisse potenti. Integer nec dictum lectus. Sed rhoncus ac ex
-                        non interdum. Nunc pellentesque, urna finibus iaculis faucibus, urna magna tincidunt est, sed
-                        placerat massa purus tincidunt dolor.</p>
+                    <p>Mineiro de nascimento, mas Paulistano de coração, desde cedo me perdia por horas
+                        <s>futricando</s> tentando resolver os problemas eletrônicos que apareciam pela casa.
+                        Com essa vocação inquieta, ingressei em Engenharia Aerospacial na UFABC e lá pude 
+                        descobrir o mundo da programação. Desde então,
+                        resolver problemas com o uso da programação vem sendo meu triunfo diário.
+                    </p>
 
                     <div class="tab-titles">
                         <p :class="[showSkills ? 'tab-links active-link' : 'tab-links']"
@@ -24,20 +25,19 @@
                     </div>
                     <div v-if="showSkills" id="skills" class="tab-contents active-tab">
                         <ul>
-                            <li><span>.NET CORE & FRAMEWORK</span><br>Desenvolvimento de aplicações e serviços com C#</li>
-                            <li><span>VUEJS & KNOCKOUTJS</span><br>Desenvolvimento de páginas web responsivas</li>
-                            <li><span>MICROSOFT AZURE CLOUD</span><br>Vivência diária com desenvolvimento orientado a Cloud
-                            </li>
+                            <li><span>C# | .NET FRAMEWORK | .NET CORE</span><br>Desenvolvimento de aplicações e serviços em C# (API Rest, messageria, contêineres, bancos relacionais e não relacionais)</li>
+                            <li><span>VANILLAJS | VUEJS | KNOCKOUTJS | JQUERY</span><br>Desenvolvimento de páginas web responsivas</li>
+                            <li><span>MICROSOFT AZURE CLOUD</span><br>Know-how em programação orientada a nuvem (IAC, AppServices, Functions, Virtual Machines, CI\CD, Kubernetes)</li>
                         </ul>
                     </div>
 
                     <div v-else-if="showExperience" id="experience" class="tab-contents">
                         <ul>
-                            <li><span>GESTÃO DE RISCO DE CRÉDITO E FRAUDE</span><br>Conceitos de nuvem em geral e do
-                                Microsoft Azure</li>
-                            <li><span>INFRAESTRUTURA DE TI</span><br>Desenvolvimento de aplicações e serviços usando a stack
-                                C#</li>
-                            <li><span>DESENVOLVIMENTO FULL STACK</span><br>Desenvolvimento de páginas web responsivas</li>
+                            <li><span>DESENVOLVEDOR FULL STACK</span><br>Desenvolvimento de soluções frontend e backend,
+                            utilizando tecnologias de ponta</li>
+                            <li><span>ANALISTA DE INFRAESTRUTURA DE TI</span><br>Gerenciamento de usuários e privilégios, sustentação de recursos computacionais e resolução de incidentes</li>
+                            <li><span>ANALISTA DE GESTÃO DE RISCO (FRAUDE E CRÉDITO)</span><br>Gestão da risco de crédito e de fraude 
+                                através da análise de comportamento e indicadores de riscos</li>
                         </ul>
                     </div>
 
@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import { ref} from 'vue'
+import { ref } from 'vue'
 
 const showSkills = ref(true);
 const showExperience = ref(false);
@@ -81,10 +81,11 @@ function setTabContent(tabContent) {
 
 <style scoped>
 #about {
-    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);    
-    padding: 30% 0;
+    background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
+    padding: 80px 0;
     color: var(--off-white);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
 }
 
 .row {
@@ -161,4 +162,28 @@ function setTabContent(tabContent) {
 
 .tab-contents.active-tab {
     display: block;
-}</style>
+}
+
+/*---- Small Screens ----*/
+@media only screen and (max-width: 600px) {
+
+    #about {
+        color: var(--off-white);
+        font-family: 'Roboto', sans-serif;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .about-col-1 img {
+        padding-bottom: 20%;
+    }
+
+    .about-col-2 h1 {
+        font-size: 1.7em;
+        margin-bottom: 5%;
+    }
+
+
+
+}
+</style>
