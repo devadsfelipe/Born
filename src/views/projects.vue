@@ -1,5 +1,3 @@
-<script setup>
-</script>
 
 <template>
     <div id="projects">
@@ -40,6 +38,9 @@
         </div>
     </div>
 </template>
+
+<script setup>
+</script>
 
 <style scoped>
 #projects {
@@ -102,8 +103,16 @@
 
 .layer p {
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
+/*---- Small Screens ----*/
+@media only screen and (max-width: 600px) {
+    .projects-list {
+    margin: 50px 40px;
+}
+
+
+}
 
 </style>
