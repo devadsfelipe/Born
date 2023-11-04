@@ -176,7 +176,7 @@ onMounted(() => {
 }
 
 /*---- Small Screens ----*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .scroller {
         width: 80%;
         max-width: 100%;

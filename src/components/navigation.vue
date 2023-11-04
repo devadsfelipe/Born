@@ -44,12 +44,12 @@ function setNavContent(activeContent) {
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a :class="[homeActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('homeActive')"
+          <a :class="[homeActive ? 'nav-link active-npmlink' : 'nav-link']" @click="setNavContent('homeActive')"
             aria-current="page" href="#home">HOME</a>
+          <a :class="[aboutActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('aboutActive')"
+            aria-current="page" href="#about">ABOUT</a>
           <a :class="[skillsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('skillsActive')"
             aria-current="page" href="#skills">SKILLS</a>
-            <a :class="[aboutActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('aboutActive')"
-            aria-current="page" href="#about">ABOUT</a>
           <a :class="[projectsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('projectsActive')"
             aria-current="page" href="#projects">PROJECTS</a>
           <a :class="[contactActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('contactActive')"
@@ -83,7 +83,7 @@ function setNavContent(activeContent) {
 .nav-link.active-link {
   color: var(--light-purple) !important;
   transform: scale(1.20);
- 
+
 }
 
 .nav-link:hover {
@@ -105,12 +105,10 @@ function setNavContent(activeContent) {
 } */
 
 
-@media only screen and (max-width: 600px) {
-  * {
+@media only screen and (max-width: 800px) {
+  .navbar {
     display: none;
   }
-
-
 }
 </style>
 

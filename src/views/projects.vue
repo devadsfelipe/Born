@@ -5,13 +5,15 @@
             <h1>Projects</h1>
             <div class="projects-list">
                 <div class="projects-carrossel">
-                    <img src="../assets/work-1.png">
+                    <img src="../assets/portfolio-background.png">
                     <div class="layer">
-                        <h3>E-Commerce</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
-                            dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
-                            convallis.</p>
+                        <h3>Personal Portfolio</h3>
+                        <p>Portfolio pessoal próprio (este que você está acessando) construído com VueJS 3.0 baseado em composition API, Html e Css, 
+                            totalmente responsível.
+                            Utilização de continuous deploy via Netlify e disponibilização feita através do GitHub Pages.</p>
                         <a href="#"></a>
+                        <p><b>Custo do projeto: R$29,90 (Domínio customizado)</b></p>
+                        <p><b>Esforço: 1 Sprint</b></p>
                     </div>
                 </div>
                 <div class="projects-carrossel">
@@ -107,11 +109,10 @@
 }
 
 /*---- Small Screens ----*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .projects-list {
-    margin: 50px 40px;
+    margin: 50px 20px;
 }
-
 
 }
 
