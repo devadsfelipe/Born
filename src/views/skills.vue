@@ -11,27 +11,25 @@
                     <p> &bull; Habilidade com serviços indepentes e altamente escalonáveis com <b>Docker e Kubernetes</b>.
                     </p>
                     <p> &bull; Levantamento de requisitos, arquitetura de soluções, gerenciamento da infraestrutura
-                        de recursos e prospeção de redução de custos.
+                        de recursos e prospeção de <b>redução de custos</b>.
                     </p>
                     </p>
                 </div>
                 <div>
                     <h2>Front-end</h2>
-                    <p> &bull; Sólidos conhecimentos em <b>VueJS 2.0 e 3.0</b> com proeficiência em componentização.</p>
-                    <p> &bull; Atuação em KnockoutJS e JQuery.</p>
+                    <p> &bull; Sólidos conhecimentos em <b>VueJS 2.0 e 3.0</b> com proficiência em componentização.</p>
+                    <p> &bull; Atuação em <b>KnockoutJS</b> e <b>jQuery</b>.</p>
                     <p> &bull; Codificação em <b>JavaScript</b> puro (VanillaJS).</p>
                     <p> &bull; Sketchs com <b>HTML5</b> e <b>CSS3</b>.</p>
                     <p> &bull; Versionamento de código com <b>GIT</b>.</p>
-                    <p> &bull; Codificação com VueJS 2 | 3 com habilidades em componentização.</p>
+                    <p> &bull; <b>Design responsivo</b> e construção de conteúdo criativo.</p>
                 </div>
                 <div>
                     <h2>Cloud Computing</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in ullamcorper
-                        dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
-                        convallis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie, lectus in
-                        ullamcorper
-                        dictum, risus tortor venenatis dui, id pharetra est nisi vel est. Etiam tincidunt dui in laoreet
-                        convallis.</p>
+                    <p> &bull; Vivência diária com <b>Azure Cloud</b></p>
+                    <p> &bull; Competência na criação de recursos <b>auto escaláveis</b> através de <b>automações</b> baseadas em PowerShell</p>
+                    <p> &bull; Know-how no gerenciamento de recursos através via <b>IAC</b> (infrastructure as code)</p>
+                    <p> &bull; Proficiência na implementação de aplicações utilizando <b>AKS</b></p>
                 </div>
             </div>
         </div>
@@ -46,6 +44,7 @@
     background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
     padding: 30px 0;
     color: var(--off-white);
+    height: 100vh;
 }
 
 .skills-list {
@@ -75,10 +74,20 @@
     border-bottom: 15px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+    #skills{
+        height: 1800px;
+    }
+    .container{
+        margin-top: 40px;
+    }
     .skills-list {
         grid-gap: 40px;
-        margin: 40px 40px;
+        margin: 40px 20px ;
+    }
+
+    .skills-list div{
+        padding: 30px 30px;
     }
 }
 </style>
