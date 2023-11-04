@@ -12,7 +12,7 @@
                         perdia por horas buscando resolver os problemas eletrônicos
                         que apareciam pela casa. Com essa vocação inquieta, a partir de um
                         primeiro contato com programação através de uma passagem pelo curso de
-                        Eng. Aerospacial na UFABC, compreendi que resolver problemas
+                        Eng. Aerospacial na universidade ferderal do ABC, compreendi que resolver problemas
                         com o uso da programação seria o meu caminho vocacional.
                     </p>
 
@@ -60,15 +60,14 @@
 
 <script setup>
 import { ref } from 'vue'
-
-const showSkills = ref(true);
-const showExperience = ref(false);
-const showCertifications = ref(false);
+let showSkills = ref(true);
+let showExperience = ref(false);
+let showCertifications = ref(false);
 
 function setTabContent(tabContent) {
-    this.showSkills = false;
-    this.showExperience = false;
-    this.showCertifications = false;
+    showSkills.value = false;
+    showExperience.value  = false;
+    showCertifications.value  = false;
 
     switch (tabContent) {
         case 'showExperience':
@@ -82,13 +81,11 @@ function setTabContent(tabContent) {
             break;
     }
 }
-
 </script>
 
 <style scoped>
 #about {
     background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
-    padding: 80px 0;
     color: var(--off-white);
     font-family: 'Montserrat', sans-serif;
     height: 100vh;

@@ -44,6 +44,7 @@
     background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
     padding: 30px 0;
     color: var(--off-white);
+    height: 100vh;
 }
 
 .skills-list {
@@ -73,7 +74,10 @@
     border-bottom: 15px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
+    #skills{
+        height: 1800px;
+    }
     .container{
         margin-top: 40px;
     }

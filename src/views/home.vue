@@ -60,21 +60,22 @@ onMounted(() => {
 
 
 <style scoped>
-#home{
+#home {
     width: 100%;
     background-image: linear-gradient(to right, #2f0549, #340551, #3a065a, #3f0662, #45066b, #45066b, #45066b, #45066b, #3f0662, #3a065a, #340551, #2f0549);
-
 }
+
 .container {
     overflow: hidden;
     max-width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .row {
     position: relative;
     display: flex;
-    width: 100vw;
 }
 
 .col {
@@ -169,6 +170,8 @@ onMounted(() => {
     --_animation-duration: 60s;
 }
 
+/*  */
+
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 0.5rem));
@@ -176,11 +179,11 @@ onMounted(() => {
 }
 
 /*---- Small Screens ----*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .scroller {
         width: 80%;
         max-width: 100%;
-        left: 10%;
+        left: 10vw;
     }
 }
 </style>

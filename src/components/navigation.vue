@@ -1,3 +1,23 @@
+<template>
+  <div class="container-fluid">
+    <!-- <div class="nav-link select-language" @click="setLanguage()">PT-BR</div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-nav">
+        <a :class="[homeActive ? 'nav-link active-npmlink' : 'nav-link']" @click="setNavContent('homeActive')"
+          aria-current="page" href="#home">HOME</a>
+        <a :class="[aboutActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('aboutActive')"
+          aria-current="page" href="#about">ABOUT</a>
+        <a :class="[skillsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('skillsActive')"
+          aria-current="page" href="#skills">SKILLS</a>
+        <a :class="[projectsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('projectsActive')"
+          aria-current="page" href="#projects">PROJETOS</a>
+        <a :class="[contactActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('contactActive')"
+          aria-current="page" href="#contact">CONTATO</a>
+      </div>
+    </nav>
+  </div>
+</template>
+
 <script setup>
 import { ref } from 'vue'
 
@@ -8,11 +28,11 @@ const projectsActive = ref(false);
 const contactActive = ref(false);
 
 function setNavContent(activeContent) {
-  this.homeActive = false;
-  this.aboutActive = false;
-  this.skillsActive = false;
-  this.projectsActive = false;
-  this.contactActive = false;
+  homeActive.value = false;
+  aboutActive.value = false;
+  skillsActive.value = false;
+  projectsActive.value = false;
+  contactActive.value = false;
 
   switch (activeContent) {
     case 'aboutActive':
@@ -31,34 +51,9 @@ function setNavContent(activeContent) {
       homeActive.value = true;
       break;
   }
-}
+};
 
 </script>
-
-<template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a :class="[homeActive ? 'nav-link active-npmlink' : 'nav-link']" @click="setNavContent('homeActive')"
-            aria-current="page" href="#home">HOME</a>
-          <a :class="[aboutActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('aboutActive')"
-            aria-current="page" href="#about">ABOUT</a>
-          <a :class="[skillsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('skillsActive')"
-            aria-current="page" href="#skills">SKILLS</a>
-          <a :class="[projectsActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('projectsActive')"
-            aria-current="page" href="#projects">PROJECTS</a>
-          <a :class="[contactActive ? 'nav-link active-link' : 'nav-link']" @click="setNavContent('contactActive')"
-            aria-current="page" href="#contact">CONTACT</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-</template>
 
 <style scoped>
 * {
@@ -66,8 +61,22 @@ function setNavContent(activeContent) {
   float: right;
 }
 
+.container-fluid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+.select-language {
+  float: left !important;
+  color: var(--off-white);
+  margin: 15px 0px 0px 15px;
+}
+
 .navbar {
   background: transparent !important;
+  margin-right: 20px;
 }
 
 .nav-link {
@@ -75,15 +84,13 @@ function setNavContent(activeContent) {
   font-size: 13px;
   transition: 0.3s ease;
   color: var(--off-white);
-  margin: 5px 0px 0px 30px;
+  margin-right: 20px;
   cursor: pointer;
 }
-
 
 .nav-link.active-link {
   color: var(--light-purple) !important;
   transform: scale(1.20);
-
 }
 
 .nav-link:hover {
@@ -91,21 +98,7 @@ function setNavContent(activeContent) {
   transform: scale(1.20);
 }
 
-
-.socialmidia {
-  display: flex;
-  text-decoration: none;
-  color: var(--bs-navbar-color)
-}
-
-/* .selectLanguage {
-  font-weight: 500;
-  text-decoration: none;
-  color: var(--bs-navbar-color)
-} */
-
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .navbar {
     display: none;
   }
