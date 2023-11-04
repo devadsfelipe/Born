@@ -143,7 +143,6 @@ form textarea {
 
 /*---- Small Screens ----*/
 @media only screen and (max-width: 800px) {
-
     .row {
         display: inline;
     }
@@ -156,16 +155,19 @@ form textarea {
         text-align: center;
     }
 
+    .contact-left h1 {
+        padding-bottom: 20%;
+    }
+
     .btn {
         width: 100%;
         font-size: 15px;
         font-weight: 500;
     }
 
-    .contact-right {
-        margin: 0;
-        padding: 0;
-        width: 94%;
+    .social-icons {
+        padding-top: 20%;
+        margin-left: 10%;
     }
 }
 </style>
